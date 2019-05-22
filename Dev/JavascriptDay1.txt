@@ -1,0 +1,231 @@
+javascript class - CS Madhav
+
+Server - What's a Server
+
+HTTP Protocol 
+Server responds to requests with resource
+resource is rendered in the web browser
+Back in the day, another request was made separately for the css after which the webpage was styled
+There was no further communication ( HTTP request )with the server and html till another link was clikced.
+Javascript Came in to the scene - Introd by netscape, changed all this.
+Javascript is a scripting language runs inside clients browserwebpage and interacts with clients
+
+ECMA - standardized it 
+introduced ECMAscript - its a specification standard
+Now, browsers need to conform with ECMAscript
+
+JS , JScript , actionsscript - implementation of ECMAscript
+
+Transpiler
+convert one version of the same language to another version of the same language 
+it is a superset of a compiler, its not only a compiler. 
+ES6 -> ES5 for eg;
+Well known transpiler for JS - Babel;
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+VAR vs LET
+function f() {
+  console.log("outside if", x)
+  if(true){
+    var x = 10;
+    console.log("inside if",x)
+  }
+  console.log("outside ",x)
+}
+
+f()
+
+
+
+is visualized as 
+function f(){
+    var x; //// var is seen as declared in the start itself , all the vars are declared like this. This is called Variable Hoisting
+    console.log("outside if", x)
+    if(true){
+        x = 10;
+        console.log("inside if",x)
+  }
+  console.log("outside ",x)
+}
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+let doesn't support variable Hoisting.
+let was introduced to similiarize with other languages.
+Never write a variable without var , let or const; - it will be attached to Global Scope
+
+Scope of both 
+Var has a function Scope
+let has a block Scope
+const is also a block scope , but a constant - needs to initialized while declaring itself ;
+
+undefined is a value , can be assigned to any variable in JS;
+
+###Developer Tool### - Check it out
+
+JS - runs in window scope, 
+----------------------------------------------------------------------------
+window.x = "XYZ"
+
+console.log(x);
+
+----------------------------------------------------------------------------
+function f(){
+  x = 10;
+  console.log(x);
+  if(true) {
+    var x = 12;
+    console.log(x);
+  }
+}
+
+f()
+
+------------------------------------------------------------------------------
+//here since var is defined and since var has function scope, it will preempt the global variable attempt.
+//if it was 'if(false)' x would've been global scope.
+------------------------------------------------------------------------------
+Google Chrome's JS engine - V8 - is a C++ Runtime takes JS as input and runs it.
+Google claims the C++ runtime runs faster than JS run with C.
+
+===============================================================================
+
+Javascript has intime compilation unlike C++.
+runs just as given , gives error when occured.
+ofc, syntax error means no run.
+
+Find Google's JS Engine 
+===============================================================================
+
+DOM - Document Object Model .
+
+Hierarchy of Elements .
+
+                                                            HTML 
+                                                            / \ 
+                                                        Head    Body----
+                                                        /           \   \
+                                                    title           Div  script
+
+The whole tree of JS is wrapped under document.
+
+f = document
+click on document and see it pointing to the window.
+
+
+f = document.getElementById(')
+f.innerText
+f.innerHTML
+document.body.children
+--------------------------------------------------------------------------------
+iterated through document.body.children to show that it could be printed.
+the whole tree would be called DOM
+--------------------------------------------------------------------------------
+##Talked by iterate table in C++
+##Same concept in JS, arrays by default iteratable - document has an iteratable class
+---------------------------------------------------------------------------------
+Differences to C.
+JS is a loosely typed language,
+all of priority/precedence carried forward to JS
+
+    But in C++
+        auto x = 0 || 1;  => true
+    in JS,
+        var x = 0 || 1; => 1;
+
+apart from 0, JS has mroe falsey values 
+falsey values are values that evaluates to false;
+if(0)
+if(" ")
+if(false)
+if(undefined)
+if(null)
+if(NaN)
+
+var z = (0 || " " || undefined) => z = undefined ( since its the last value specified ) when all values false, the last value is choosen
+var z = ( 1 || 2 || 3 ) => z = 1 ( since its the first value specified ) // when all values true, the first value is choosen
+----------------------------------------------------------------------------------
+alert
+confirm
+prompt
+
+*In Developer Console*
+
+JS is a single thread language - this is why when any of these functions are called you can't do anything on the site.
+This behaviour is called Synchronous Behaviour.
+JS can also behave in an Asynchronous way - will be discussed in the future.
+-------------------------------------------------------------------------------------
+INT and float not the same as in C++ in JS
+both x = 10 and x = 10.5 returns as type NUMBER
+
+-------------------------------------------------------------------------------------
+FUNCTIONS !!
+
+function x() {   }   ==================== called by x() - function declaration
+var x = function () {     } ============= called by x() - function expression - anonymous function
+-------------------------------------
+| console.log(x)     -- "undefined"  |
+|   var x = function() {   }         |               FUNCTION Hoisting
+-------------------------------------
+
+---------------------------------------------------------------------------------------
+
+FAT ARROW Function Shorthand
+
+let x = (a,b) => a + b 
+
+       ==
+
+let x = (a,b) => { return a + b;}
+
+Refer Note at this point , cause current outage at this point.
+
+
+--------------------------------------------------------------------------------------
+BEST Documentation for Javascript = MDN
+
+--------------------------------------------------------------------------------------
+ARRAY
+
+new Array - syntax shown on MDN
+
+---------------------------------------------------------------------------------------
+
+FOR LOOP IN JS
+let a = ["",10,20]
+for(let i of a) {     // i is the data of a[i]
+  console.log(i)
+}
+
+for(let i in a) {     // i is the index
+  console.log(a[i])
+}
+
+for(let i = 0;i<a.length;++i) {   // i is the index
+  console.log(a[i])
+}
+-----------------------------------------------------------------------------------------
+console.log(a.indexOf(100)) - returns the index if exits , otherwise -1.
+
+----------------------
+
+
+let a = [1,10,20]
+console.log(a.indexOf(100))
+
+let x = a.map(function(c,i,a) { /// current,index,array - the parameters accepted in this way
+  console.log(c,i,a)
+  return c*2;
+})
+
+console.log(x)
+
+//map builds a new array;
+
+//forEach does it inplace.
+
+
+Assignments 
