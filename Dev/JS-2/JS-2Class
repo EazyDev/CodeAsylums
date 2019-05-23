@@ -1,0 +1,168 @@
+Use Template Literals to make use of dynamic addition/allocation of program
+When passing a function 
+onclick
+eg: calculator - 
+instead of having functiosn for every number -> have a number function and pass a number inside it.
+
+
+Use class for classList/toggle/addition
+eg: div.classList.toggle('strike')
+or div.classList.add('strike')
+
+stike is css 
+.strike{
+    text-decoration : 'line-through';
+}
+
+Discussing about yesterday assignment.
+
+Now, 
+     ////////////////Functions
+
+
+function X(a) {
+    return function () { /// this function has access to the parameters passed to the above function
+        return a * a * a; 
+    }
+}
+
+
+f = X(5)
+x = f()
+
+X() returns the scope of a even after the function return call inside has finished.
+This is called a JS Closure. 
+What is the use?
+
+
+
+//////////////////////////OBJECTS///////////////////////////
+Everything is an objectn JS
+Creating an object in JS
+
+let i = {}
+i = new object
+
+let user = {
+    name : "Madhav",
+    'age' : 22
+    "address" : {
+        "line1" : "rohini",
+        "line2" :"12",
+        "city"  : "delhi"
+    },
+    getBirthYear: function () {
+        return 2019 - this.year
+    }
+}
+
+console.log(user.age);
+console.log(getBirthYear())  --------------------------------------------> 22 answer
+
+/////////////////////////////////////////////////////////////////////
+let i = {}
+i = new object
+
+let user = {
+    name : "Madhav",
+    'age' : 22
+    "address" : {
+        "line1" : "rohini",
+        "line2" :"12",
+        "city"  : "delhi"
+    },
+    getBirthYear: function () => {
+        return 2019 - this.year
+    }
+}
+
+console.log(user.age);
+console.log(getBirthYear())  --------------------------------------------> Nan answer
+
+here, this points to the window object and not the object within which the arrow function has been described
+
+Fat Arrow functions are extremely useful when we are descfibing class within which we need to point to elementsl
+
+----------------------------------------------------------------------------------------------------------
+objects.keys(user) = returns all the keys of the given object
+
+using loop : 
+for(i of object.key(user))
+{
+    console.log(user[i]) --------------------------------- not user.i //because while user[i] searches for user.key1 , user.key2 , user.key3 etc but user.i is searching for literal 'i' inside the object;
+}
+
+-----------------------------------------------------------------------------------------------------------
+
+/////////////////////Assignment//////////////////////
+Implement Facebook Notification Bar 
+ - Bell Icon red, 
+ - every 30secs (30k milliseconds), generate a random notification with image src, title and 
+ - after 30 seconds the red dot needs to come on with count on top , with red dot
+ - this count increases every 30s obvs
+ - implement a scroller for the drop down menu which won't extend to the full page
+ - once opened, the count is refreshed, just to be incremented yet again
+
+    to be passed as predefined notifications
+    
+    predetermined object { imgurl:
+                            title:
+                            description:
+                                    }
+
+    whenever a setinterval time goes off , a random index is taken and then use the predetermined object 
+    Clue : Bootstrap Classes;
+    Go for the drop down elements strap.
+    look at what is happening there , notice and that change implement it.
+
+ ---------------------------------------------------------------------------------------------------------------
+
+ Set Timeout and Set Interval
+
+
+ - .SetTimeout(function(){} , 1000); - This will invoke whatever function is called after the timeout for one time.
+
+
+*- .SetInterval(function(){} , 1); - This will invoke function every interval 
+
+    ClearInterval - look into it
+
+-------------------------------------------------------------------------------------------------------------------
+                                                    JSON - Javascript Object Notation 
+
+
+Universal format for communication across different web services.
+
+https://www.w3schools.com/whatis/whatis_json.asp
+
+Its objects inside which the content can be number,string,object,array,number,null. No functions or undefined.
+Client takes this data - Server serves this to client.
+This can be natively parsed by JS and thats why this is universal.
+the quotes inside JSON have to be double-quotes (""); ALWAYS!!!!!!!!!!!!!!
+it is a huge part of API .
+
+how do we parse it? 
+JSON is a class, 
+JSON.parse - accepts a string - returns our normal javascript object;
+
+How do we pack it to be send back?
+
+JSON.stringify(x) 
+
+
+
+----------------------------------------------------------------------------------------------------------------------
+                                                    HTTP
+
+
+
+HHTP response and request tags - header , body , status code etc
+
+??????????????????????
+Study XHR and come 
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Google Developer Tools 
+Breakpoints .
+- Store a dropdown as global variable to tinker with it.
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
