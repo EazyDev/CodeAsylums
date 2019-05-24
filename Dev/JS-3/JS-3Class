@@ -1,0 +1,64 @@
+What is Bootstrap - CSS framework to make web pags responsive,
+it divides the pages into parts
+eg: when a website is responsive, it adjusts its dimensions according to your device's 
+screen size.
+its nothing but css classes and some JS classes.
+there's no logic to it. - Just Use it, Just CSS - nothing else.
+
+
+-------------------------------------------------------------------------------
+HTML - Message Attribute
+Response and Request - 
+
+--Context - Type - specifies the type of format of response.
+
+--------------------------------------------------------------------------------
+                        API - Apllication Programming Interface
+
+A particular defined interface with sets of instructions to HIT to communicate with a particualr service.
+
+*Use a Coindesk API to get the bitcoin rate in GBB , Euro and Dollars.*
+
+///DNS - Domain Name System - DNS has against the domain name , IP Addresses
+
+Port 443 - For https/SSL
+Port 80 - For http
+
+to pass store and go through JSON - we use XML 
+
+
+//Assignment Plot a graph 
+X - axis - Time
+Y - axis - Price
+part a) For USD - set interval 1 second.
+part b) plot all of the currencies USD, EUR , GBB in one graph
+
+*Use HighChart Library
+
+Discussing UNIX timestamp
+JS deals with timestamps but in milliseconds
+ var x = series 
+ then , 
+ x.series[0].addPoiunt([d.getTime(),8000])
+ gets you the x and y axis points 
+
+
+
+ //////////////////////////////////////////////////////////////////////////////////
+                            COOKIES.
+
+                            Key - Value Pairs
+                            SessionID - 
+
+ Whenever we go into sites we've already logged into. 
+ The log in is already there due to Cookies, 
+ not HTML 
+ because HTML is a stateless request.
+ We make it(HTTP) stateful with cookies 
+
+ We maintain sessions with Cookies. 
+
+ Explore Chrome Developer Tools - Application - Cookies.
+
+ Cookies maintained against a particular domain. 
+
