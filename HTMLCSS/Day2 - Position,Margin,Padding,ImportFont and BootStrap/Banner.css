@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Slabo+27px&display=swap');
+
+.outerbox{
+    background-color:white;
+    width: 750px;
+    height: 500px;
+    border:3px solid black;
+}
+.innerbox{
+    height: 478px;
+    margin: 10px 20px 10px 20px;
+    background-color:rgba(8, 8, 107, 0.795);
+
+}
+
+.logo{
+    position: absolute;
+    padding: 50px 200px;
+    
+    color:white;
+}
+
+
+.WeCanCode{
+    font-family: 'Anton',sans-serif;
+    color: white;
+    position: absolute;
+    padding: 220px 245px ;
+    font-size: 30px;
+}
+
+.anchor{
+    font-family: 'Slabo 27px', serif;
+    position: absolute;
+    padding: 340px 280px;
+    font-size: 15px;
+    
+}
+
+a{
+    color:orange;
+    font-size: 18px;
+    
+}
+
+.p{
+    display: inline-block;
+}
