@@ -1,42 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+            <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+            <script src="https://code.highcharts.com/highcharts.js"></script>
+            <script src="https://code.highcharts.com/modules/exporting.js"></script>
+            <script src="https://code.highcharts.com/modules/export-data.js"></script>            
     </head>
     <body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script>
-            let xhr = new XMLHttpRequest;
-            var resp = 0;
-            xhr.addEventListener('load', function(){
-                resp = JSON.parse(this.responseText)
-                console.log(JSON.parse(this.responseText))
-            })
-
-            xhr.addEventListener('error', function(){
-                console.log(this.responseText)
-            })
-
-            xhr.open('GET', 'https://api.coindesk.com/v1/bpi/currentprice.json')
-
-            xhr.send()
-            console.log(resp)
-    </script>
+            <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+            Salman Naseer
+    <script src="app.js"></script>
     </body>
-
-
 </html>
